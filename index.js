@@ -1,5 +1,11 @@
 // react-button-library/src/Button.js
 import React, { useState } from 'react';
+import styled from 'styled-components';
+
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
  
 const HelloWorld = () => {
   const [color, setColor] = useState('blue');
@@ -9,9 +15,11 @@ const HelloWorld = () => {
   };
  
   return (
-    <button style={{ backgroundColor: color }} onClick={changeColor}>
-      Click me
-    </button>
+    <Wrapper>
+        <button style={{ backgroundColor: color }} onClick={changeColor}>
+        Click me
+        </button>
+    </Wrapper>
   );
 };
  
